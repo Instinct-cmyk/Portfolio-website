@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <span class="circle-letter">Y</span>
+                    <div class="logo-text">Yuvraj Dabral</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Visual Designer</span></h5>
+                    <h1>Yuvraj Dabral</h1>
+                    <p> Hi im Yuvraj a visual designer who is currently doing his second year studies in communication/visual Designing.I keep learning new things everyday in my experience and i keep looking foward to provide the best content to my clients. You can contact and conncet with me below! 
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Logo designer","Brand designer","UI/UX designer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+
+<section class="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-row">
+      
+      <div class="project-container" onclick="openModal(1)">
+        <img src="VINYL COVER FINAL FRONT.jpg" alt="VINYL COVER FINAL FRONT.jpg" class="project-image">
+        <h3>AC/DC Vinyl Cover</h3>
+        <p>A Vinyl Cover design of the famous 90s band AC/DC. Thunderstruck album</p>
+      </div>
+  
+      
+      <div class="project-container" onclick="openModal(2)">
+        <img src="Haven logo@4x.png" alt="Haven logo@4x" class="project-image">
+        <h3>A hotel brand Identify</h3>
+        <p>Logo Design and stationary mockup for a hotel brand named "Haven Hotel."</p>
+      </div>
+  
+      
+      <div class="project-container" onclick="openModal(3)">
+        <img src="WAVE FRONT FINAL@4x.png" alt="WAVE FRONT FINAL@4x" class="project-image">
+        <h3>Packaging Design</h3>
+        <p>A Surfboard box packaging for a brand named "WAVE"</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <div class="modal" id="modal-1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(1)">&times;</span>
+      <h2>Vinyl Cover</h2>
+      <div class="modal-images">
+        <img src="VINYL COVER FINAL FRONT.jpg" alt="VINYL COVER FINAL FRONT.jpg">
+        <img src="VINYL COVER FINAL BACK.jpg" alt="VINYL COVER FINAL BACK.jpg">
+        <img src="project1.jpg" alt="project1">
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="modal-2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(2)">&times;</span>
+      <h2>Haven Hotel.</h2>
+      <div class="modal-images">
+        <img src="Artboard 6@4x.png" alt="Artboard 6@4x">
+        <img src="final mockup.png" alt="final mockup">
+        <img src="Mockup2.jpg" alt="Mockup2">
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="modal-3">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal(3)">&times;</span>
+      <h2>Wave</h2>
+      <div class="modal-images">
+        <img src="WAVEMOCKUP1@4x.png" alt="wavemockup1">
+        <img src="wave back.png" alt="Wave back">
+        <img src="WAVEMOCKUP2@4x.png" alt="wavemockup2">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <section class="contact-me">
+    <div class="wrapper">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
